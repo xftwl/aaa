@@ -13,9 +13,9 @@ $capability = new Services_Twilio_Capability($accountSid, $authToken);
 
 $capability->allowClientIncoming($clientName);
 
-$capability->allocClientOutgoing($appSid, array(), $clientName);
+$capability->allowClientOutgoing($appSid, array(), $clientName);
 
-$token = $capaility->generateToken();
+$token = $capability->generateToken();
 
 echo $token;
 ?>
